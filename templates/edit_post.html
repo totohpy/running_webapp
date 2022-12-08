@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <h1>Edit Record: {{ post.date }}</h1>
+  <form action="{{ url_for('edit_post', post_id=post._id) }}" method="POST">
+    วันที่: <input type="date" name="date" value="{{ post.date }}"><br>
+    ระยะทาง (กิโลเมตร): <input type="text" name="distance" value="{{ post.distance }}"><br>
+    เวลา : <input type="number" step="any" name="time" value="{{ post.time }}" min="0" max="24"> ชั่วโมง 
+          
+          <br>
+    
+    <input type="submit" value="แก้ไข">
+  </form>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <h1>Post</h1>
+  วันที่: {{ post.date }}<br>
+  ระยะทาง (กิโลเมตร): {{ post.distance }}<br>
+  เวลา : {{ post.time}}
+  <br>
+   <br>
+   
+   
+  <!--
+  <b>Comments</b>
+  <ul>
+    {% for comment in comments %}
+      <li>{{ comment.message }}</li>
+    {% endfor %}  
+  </ul>
+  <form action="{{ url_for('add_comment', post_id=post._id) }}" method="POST">
+    New comment: <input type="text" name="message">
+    <input type="submit" value="เพิ่ม">
+  </form>
+
+  --> 
+  <br>
+
+  [<a href="{{ url_for('index') }}">หน้าแรก</a>]
+  [<a href="{{ url_for('edit_post', post_id=post._id) }}">แก้ไข</a>]
+</body>
+</html>

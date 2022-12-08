@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <h1>Login</h1>
+
+  {% if error_message %}
+    <div style="border: red; background: #ffcccc; padding: 10px;">
+      {{ error_message }}<br>
+    </div>
+  {% endif %}
+
+  <form action="{{ url_for('login') }}" method="POST">
+    Username: <input type="text" name="username"><br>
+    Password: <input type="password" name="password"><br>
+    <input type="submit" value="Log in">
+  </form>
+</body>  
+</html>

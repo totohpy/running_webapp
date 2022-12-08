@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+  {% if user %}
+    {{ user.full_name }} logged in. <a href="{{ url_for('logout') }}">Log out</a><br>
+  {% else %}
+    <a href="{{ url_for('login') }}">Log in</a>
+  {% endif %}
+  <h1>รวมสถิติ</h1>
+
+  <ul>
+    {% for post in posts %}
+      <li>
+        {{ post.date}}
+        {% if post.owner_username %}({{ post.owner_username }}){% endif %}
+
+    </li>
+    {% endfor %}
+  </ul>
+</body>
+</html>
